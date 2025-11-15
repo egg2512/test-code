@@ -25,10 +25,6 @@ export default function Footer() {
   return (
     <footer className="bg-secondary/20 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        {/* Top footer columns removed per request */}
-
-        {/* Contact Info removed per request */}
-
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-foreground/60">
           <p>&copy; 2025 Cocoon Vietnam. All rights reserved.</p>

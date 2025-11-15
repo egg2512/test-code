@@ -32,7 +32,7 @@ export default function JourneySection() {
     { 
       number: 2, 
       title: 'Tuyển Chọn', 
-      icon: '✓', 
+      icon: '✅', 
       description: 'Kiểm định khắt khe ngay tại vườn',
       detail: 'Đảm bảo chất lượng cao nhất'
     },
@@ -59,53 +59,49 @@ export default function JourneySection() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: 'url(/s1.jpg)',
-          filter: 'brightness(0.66) contrast(1.0) saturate(0.65)',
         }}
       />
       
-      {/* Light brown background overlay */}
-      <div className="absolute inset-0 bg-amber-50/45 backdrop-blur-sm" />
-      
-      {/* Decorative Background */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      </div>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/40" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Eyebrow */}
         <div className={`text-center mb-6 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <span className="inline-block px-6 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold tracking-wide">
+          <span className="inline-block px-6 py-2 bg-amber-100/80 text-amber-900 rounded-full text-sm font-semibold tracking-wide border border-amber-200">
             QUY TRÌNH VẬN CHUYỂN
           </span>
         </div>
-
         {/* Header */}
         <div className={`text-center mb-20 transition-all duration-1000 delay-200 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-balance leading-tight">
-            🌿 HÀNH TRÌNH ĐẾN NHÀ MÁY TƯƠI MỚI VẸN NGUYÊN
-          </h2>
+          <div className="bg-black/40 backdrop-blur-sm rounded-2xl border border-white/20 p-3 md:p-5 shadow-xl max-w-4xl mx-auto text-center mb-6">
+            <h2 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+              🌿 HÀNH TRÌNH ĐẾN NHÀ MÁY TƯƠI MỚI VẸN NGUYÊN
+            </h2>
+          </div>
           <div className="h-1 w-24 bg-primary mx-auto mb-6" />
-          <div className="text-xl md:text-2xl text-foreground/70 max-w-4xl mx-auto leading-relaxed space-y-4">
-            <p>
-              Ngay khi trái bí đao đạt độ chín hoàn hảo, mỗi quả được tuyển chọn khắt khe ngay tại vườn — chỉ những trái tươi, khỏe mới được thu hoạch.
-            </p>
+          <div className="bg-black/40 backdrop-blur-sm rounded-2xl border border-white/20 p-6 md:p-10 shadow-xl max-w-4xl mx-auto">
+            <div className="text-xl md:text-2xl text-white/70 leading-relaxed space-y-4">
+              <p>
+                Ngay khi trái bí đao đạt độ chín hoàn hảo, mỗi quả được tuyển chọn khắt khe ngay tại vườn — chỉ những trái tươi, khỏe mới được thu hoạch.
+              </p>
 
-            <p>
-              Các trái được đóng gói và vận chuyển trong ngày, dưới điều kiện kiểm soát nhiệt độ, độ ẩm và ánh sáng tối ưu nhằm giữ trọn hàm lượng hoạt chất và độ tươi nguyên bản.
-            </p>
+              <p>
+                Các trái được đóng gói và vận chuyển trong ngày, dưới điều kiện kiểm soát nhiệt độ, độ ẩm và ánh sáng tối ưu nhằm giữ trọn hàm lượng hoạt chất và độ tươi nguyên bản.
+              </p>
 
-            <p>
-              Cocoon cam kết rút ngắn tối đa thời gian từ thu hoạch đến sản xuất để hạn chế oxy hóa và bảo toàn chất lượng tự nhiên của nguyên liệu.
-            </p>
+              <p>
+                Cocoon cam kết rút ngắn tối đa thời gian từ thu hoạch đến sản xuất để hạn chế oxy hóa và bảo toàn chất lượng tự nhiên của nguyên liệu.
+              </p>
 
-            <p>
-              Đây không chỉ là một quy trình vận chuyển — mà là cam kết chất lượng từ vườn tới làn da của bạn.
-            </p>
+              <p>
+                Đây không chỉ là một quy trình vận chuyển — mà là cam kết chất lượng từ vườn tới làn da của bạn.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -146,7 +142,7 @@ export default function JourneySection() {
                   <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   {/* Card Content */}
-                  <div className="relative bg-card rounded-3xl p-8 border border-border h-full flex flex-col shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
+                  <div className="relative bg-black/40 backdrop-blur-sm rounded-3xl p-8 border border-white/20 h-full flex flex-col shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-2">
                     {/* Step Number Badge */}
                     <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-primary to-accent text-primary-foreground rounded-2xl flex items-center justify-center font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
                       {step.number}
@@ -158,17 +154,17 @@ export default function JourneySection() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold mb-3 text-balance">
+                    <h3 className="text-2xl font-bold mb-3 text-white text-balance">
                       {step.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-foreground/70 mb-4 flex-grow leading-relaxed">
+                    <p className="text-white/70 mb-4 flex-grow leading-relaxed">
                       {step.description}
                     </p>
 
                     {/* Detail */}
-                    <div className="pt-4 border-t border-border">
+                    <div className="pt-4 border-t border-white/20">
                       <p className="text-sm text-primary font-semibold">
                         {step.detail}
                       </p>

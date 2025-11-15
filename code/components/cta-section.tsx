@@ -22,22 +22,27 @@ export default function CtaSection() {
   }, [])
 
   return (
-    <section id="lien-he" className="py-20 px-6 md:px-12 bg-primary text-primary-foreground relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-foreground rounded-full blur-3xl" />
-      </div>
+    <section id="lien-he" className="py-20 px-6 md:px-12 text-primary-foreground relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: 'url(/s1.jpg)',
+        }}
+      />
+      
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <div className={`max-w-4xl mx-auto relative z-10 text-center transition-all duration-1000 ${
+      <div className={`max-w-4xl mx-auto relative z-10 text-center bg-black/40 backdrop-blur-sm rounded-2xl border border-white/20 p-6 md:p-8 shadow-xl transition-all duration-1000 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-snug">
           Khám Phá Nước Tẩy Trang Bí Đao
         </h2>
 
-        <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto text-foreground/95">
+        <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto text-green-500">
           Mỗi giọt Cocoon — thanh lọc dịu nhẹ, giữ trọn tinh túy bí đao Việt Nam. Hãy trải nghiệm sự khác biệt từ thiên nhiên.
         </p>
 

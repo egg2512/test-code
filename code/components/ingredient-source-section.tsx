@@ -47,12 +47,11 @@ export default function IngredientSourceSection() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: 'url(/s1.jpg)',
-          filter: 'brightness(0.66) contrast(1.0) saturate(0.65)',
         }}
       />
       
-      {/* Light brown background overlay */}
-      <div className="absolute inset-0 bg-amber-50/40 backdrop-blur-sm" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/40" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Eyebrow */}
@@ -68,9 +67,9 @@ export default function IngredientSourceSection() {
         <div className={`text-center mb-20 transition-all duration-1000 delay-200 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <div className="inline-block bg-white rounded-2xl px-10 py-8 border border-amber-200/40 shadow-lg max-w-4xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance leading-tight">
-              <span className="text-foreground">Nước Tẩy Trang Bí Đao</span>
+          <div className="bg-black/40 backdrop-blur-sm rounded-2xl border border-white/20 p-6 md:p-8 shadow-xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white leading-tight">
+              <span>Nước Tẩy Trang Bí Đao</span>
             </h2>
             <p className="text-xl md:text-2xl text-primary font-semibold">
               "Hồn Việt trong chai"
@@ -122,43 +121,30 @@ export default function IngredientSourceSection() {
 
           {/* Text Content */}
           <div className="space-y-8">
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-balance">
+            <div className="bg-black/40 backdrop-blur-sm rounded-2xl border border-white/20 p-6 md:p-8 shadow-xl">
+              <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white leading-tight">
                 Làm Sạch Sâu - <br />
                 <span className="text-primary">Dịu Nhẹ Tự Nhiên</span>
               </h3>
-              <p className="text-lg leading-relaxed text-foreground/80 mb-8">
+              <p className="text-lg leading-relaxed text-white/80 mb-6">
                 Làn da dầu và mụn rất nhạy cảm nên cần được thiết kế một loại nước tẩy trang phù hợp. Với công nghệ Micellar, nước tẩy trang bí đao giúp làm sạch hiệu quả lớp trang điểm, bụi bẩn và dầu thừa, mang lại làn da sạch hoàn toàn và mềm mịn.
               </p>
-            </div>
 
-            {/* Feature Pills */}
-            <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 shadow-lg">
+              {/* Feature Pills */}
               <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></span>
-                  <p className="text-base text-foreground/80">Làm sạch sâu lớp trang điểm, bụi bẩn và bã nhờn trên bề mặt da.</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></span>
-                  <p className="text-base text-foreground/80">Dịu nhẹ, thông thoáng và không làm bí da.</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></span>
-                  <p className="text-base text-foreground/80">Kiểm soát dầu thừa, hỗ trợ trong việc chăm sóc da mụn.</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></span>
-                  <p className="text-base text-foreground/80">Dạng nước trong suốt không màu.</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></span>
-                  <p className="text-base text-foreground/80">Mùi tinh dầu tràm trà thoang thoảng.</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></span>
-                  <p className="text-base text-foreground/80">Phù hợp với làn da cần tẩy sạch nhanh lớp trang điểm, da dầu, mụn thường xuyên trang điểm cần một sản phẩm tẩy trang phù hợp.</p>
-                </li>
+                {[
+                  "Làm sạch sâu lớp trang điểm, bụi bẩn và bã nhờn trên bề mặt da.",
+                  "Dịu nhẹ, thông thoáng và không làm bí da.",
+                  "Kiểm soát dầu thừa, hỗ trợ trong việc chăm sóc da mụn.",
+                  "Dạng nước trong suốt không màu.",
+                  "Mùi tinh dầu tràm trà thoang thoảng.",
+                  "Phù hợp với làn da cần tẩy sạch nhanh lớp trang điểm, da dầu, mụn thường xuyên trang điểm cần một sản phẩm tẩy trang phù hợp."
+                ].map((text, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></span>
+                    <p className="text-base text-white/80">{text}</p>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

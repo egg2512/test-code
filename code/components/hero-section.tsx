@@ -16,12 +16,11 @@ export default function HeroSection() {
         className="absolute inset-0 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: 'url(/s1.jpg)',
-          filter: 'brightness(0.66) contrast(1.0) saturate(0.65)',
         }}
       />
       
-      {/* Subtle overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Content */}
       <div className={`relative z-10 max-w-4xl mx-auto px-6 md:px-12 text-center text-white transition-all duration-1000 ${
